@@ -4,6 +4,13 @@ class CommandLine():
     def __init__(self, inOptions = None):
         import argparse
         
+        self.parser = argparse.ArgumentParser(
+            description='This program adjusts base qualities of bam files to a score set by user.',
+            add_help=True,  # default is True
+            prefix_chars='-',
+            usage='%(prog)s --inputBam --outputBam --score'
+        )
+        
         self.parser.add_argument('--inputBam', type=str, default=None, required=True, help='bam file to adjust quality scores')
         self.parser.add_argument('--outputBam', type=str, default=None, required=True, help='name of output bam file')
         self.parser.add_argument('--score', type=int, default=0, required=True, help='score to adjust all base quality scores to')
