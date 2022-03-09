@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
     contig_list = get_list_of_contig(fasta_file)
 
-    updated_contig_dict = run_parallel(4, bam_file, output_name, score, contig_list)
+    updated_contig_dict = run_parallel(8, bam_file, output_name, score, contig_list)
 
 
 # 141993
