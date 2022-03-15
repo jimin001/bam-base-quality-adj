@@ -27,7 +27,7 @@ class CommandLine():
 def bam_by_chunk(bam_file_name, output_file_name, contig, score, process_id):
 
     bam = pysam.AlignmentFile(bam_file_name, "rb")
-    outputfilename = output_file_name + contig
+    outputfilename = output_file_name + contig + ".bam"
     outfile = pysam.AlignmentFile(outputfilename, "wb", template=bam)
     reads = bam.fetch(contig)
 
