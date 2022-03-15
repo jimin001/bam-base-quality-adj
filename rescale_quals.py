@@ -5,7 +5,7 @@ def process(fname):
     fin = open(fname)
     for line in fin:
         if line[0] == '@':
-            print line,
+            #print line,
             continue
         line = line.strip().split("\t")
         if len(line[10]) != len(line[9]):
