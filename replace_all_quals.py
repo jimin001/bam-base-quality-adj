@@ -1,3 +1,5 @@
+# written with reference to https://www.biostars.org/p/51005/
+
 #!/usr/bin/env python3
 import sys
 quality_char = "!"
